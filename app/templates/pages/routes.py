@@ -1,10 +1,10 @@
 from flask import render_template
-from . import tools
+from . import pages
 
-@tools.route('/')
+@pages.route('/')
 def index():
 	return render_template('pages/index.html')
 
-@tools.route('/user/<username>')
+@pages.route('/user/<username>')
 def user(username):
 	return render_template('pages/user.html', username=username)

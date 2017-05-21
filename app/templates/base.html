@@ -1,0 +1,18 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Pages{% endblock %}
+
+{% block navbar %}
+  <a class="navbar-brand" href="{{ url_for('pages.index') }}">Pages</a>
+
+  <ul class="nav navbar-nav">
+    <li><a href="{{ url_for('pages.index') }}">Home</a></li>
+    <li><a href="{{ url_for('pages.user', username='chooan') }}">Profile</a></li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
